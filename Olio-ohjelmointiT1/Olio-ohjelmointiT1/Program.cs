@@ -10,8 +10,8 @@ namespace Viikkotehtavat
     {
         static void Main(string[] args)
         {
-            Tehtava1();
-            //Tehtava2();
+            //Tehtava1();
+            Tehtava2();
         }
         static void Tehtava1()
         {
@@ -22,11 +22,56 @@ namespace Viikkotehtavat
             {
                 retval = "yksi";
             }
+            else if (luku == 2)
+            {
+                retval = "kaksi";
+            }
+            else if (luku == 3)
+            {
+                retval = "kolme";
+            }
             else
             {
-
+                retval = "joku muu luku!";
             }
             Console.WriteLine(retval);
+            Console.ReadLine();
+        }
+
+        static void Tehtava2()
+        {
+            Console.WriteLine("Anna oppilaan pistemäärä: ");
+            string pisteet = Console.ReadLine();
+            int pisteret = int.Parse(pisteet);
+            if (pisteret == 0 || pisteret == 1)
+            {
+                pisteet = "0";
+            }
+            else if (pisteret == 2 || pisteret == 3)
+                {
+                pisteet = "1";
+                }
+            else if (pisteret == 4 || pisteret == 5)
+            {
+                pisteet = "2";
+            }
+            else if (pisteret == 6 || pisteret == 7)
+            {
+                pisteet = "3";
+            }
+            else if (pisteret == 8 || pisteret == 9)
+            {
+                pisteet = "4";
+            }
+            else if (pisteret >= 10 || pisteret <= 12 )
+            {
+                pisteet = "5";
+            }
+            else
+            {
+                pisteet = "Et antanu valideja numeroita!";
+            }
+            Console.WriteLine("Opiskelijan numero on: " + pisteet);
             Console.ReadLine();
         }
     }
