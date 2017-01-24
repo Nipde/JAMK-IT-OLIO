@@ -10,9 +10,24 @@ namespace Viikkotehtavat
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Anna tehtävä numero jonka haluat tarkistaa(esim. Tehtävä 1 = 1): ");
+            string tarkistus = Console.ReadLine();
+            int tarkisparse = int.Parse(tarkistus);
+            switch (tarkisparse)
+            {
+                case 1:
+                    Tehtava1();
+                    break;
+                case 2:
+                    Tehtava2();
+                    break;
+                case 3:
+                    Tehtava3();
+                    break;
+            }
             //Tehtava1();
             //Tehtava2();
-            Tehtava3();
+            //Tehtava3();
         }
         static void Tehtava1()
         {
@@ -77,17 +92,23 @@ namespace Viikkotehtavat
         }
         static void Tehtava3()
         {
+            //pyydetään ensimmäinen luku ja muutetaan int-muotoon
             Console.WriteLine("Anna ensimmäinen luku: ");
             string eka = Console.ReadLine();
             int ekaluku = int.Parse(eka);
+            //pyydetään toinen luku ja muunnetaan int-muotoon
             Console.WriteLine("Anna toinen luku: ");
             string toka = Console.ReadLine();
             int tokaluku = int.Parse(toka);
+            //pyydetään kolmas luku ja muutetaan int-muotoon
             Console.WriteLine("Anna kolmas luku: ");
             string koka = Console.ReadLine();
             int kolmasluku = int.Parse(koka);
+            //lasketaan lukujen summa
             int summa = ekaluku + tokaluku + kolmasluku;
+            //lasketaan lukujen keskiarvo, koska vaadittuna 3 lukua ehdottomana, voimme koodata suoraan jaettuna numerolla 3
             int keskiarvo = summa / 3;
+            //tulostus
             Console.WriteLine("Lukujen summa on: " + summa + " ja lukujen keskiarvo on: " + keskiarvo);
             Console.ReadLine();
         }
