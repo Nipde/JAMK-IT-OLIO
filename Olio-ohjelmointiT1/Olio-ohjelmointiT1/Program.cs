@@ -11,7 +11,8 @@ namespace Viikkotehtavat
         static void Main(string[] args)
         {
             //Tehtava1();
-            Tehtava2();
+            //Tehtava2();
+            Tehtava3();
         }
         static void Tehtava1()
         {
@@ -72,6 +73,22 @@ namespace Viikkotehtavat
                 pisteet = "Et antanu valideja numeroita!";
             }
             Console.WriteLine("Opiskelijan numero on: " + pisteet);
+            Console.ReadLine();
+        }
+        static void Tehtava3()
+        {
+            Console.WriteLine("Anna ensimmäinen luku: ");
+            string eka = Console.ReadLine();
+            int ekaluku = int.Parse(eka);
+            Console.WriteLine("Anna toinen luku: ");
+            string toka = Console.ReadLine();
+            int tokaluku = int.Parse(toka);
+            Console.WriteLine("Anna kolmas luku: ");
+            string koka = Console.ReadLine();
+            int kolmasluku = int.Parse(koka);
+            int summa = ekaluku + tokaluku + kolmasluku;
+            int keskiarvo = summa / 3;
+            Console.WriteLine("Lukujen summa on: " + summa + " ja lukujen keskiarvo on: " + keskiarvo);
             Console.ReadLine();
         }
     }
